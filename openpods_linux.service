@@ -1,0 +1,10 @@
+[Unit]
+Description=AirPods Battery Monitor
+
+[Service]
+ExecStart=/usr/bin/python3 /PATH/TO/openpods_linux/main.py --format json -o /tmp/openpods_linux.log
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=default.target
